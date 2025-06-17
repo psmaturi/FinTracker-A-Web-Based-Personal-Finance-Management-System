@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    background-color: #ecf0f3;
+    color: #333;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background-color: #1f2f33;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    line-height: 40px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li:hover {
+    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    padding: 40px;
+    flex-grow: 1;
+    background-color: #1f2f33;
+    opacity: 0.9;
+}
+
+.section {
+    margin-bottom: 25px;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0);
+}
+
+h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+/* Buttons */
+.view-btn {
+    padding: 12px 24px;
+    border: none;
+    background: linear-gradient(45deg, #3498db, #8e44ad);
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.view-btn:hover {
+    opacity: 0.7;
+    transform: scale(1.05);
+}

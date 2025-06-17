@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Form | Finance Tracker</title>
+    <link rel='stylesheet' href='login.css'>
+   
+    <style>
+        /* Your existing CSS styles */
+    </style>
+</head>
+<body>
+    <!-- Money Falling Animation -->
+    
+    <!-- Login Form -->
+    <!-- Login Form -->
+<div class="wrapper">
+    <div class="login_box">
+        <div class="login-header">
+            <span>Login</span>
+        </div>
+        <!-- Update form action to link to login.php -->
+        <form id="loginForm" action="login.php" method="POST">
+            <div class="input_box">
+                <input type="text" id="username" name="username" class="input-field" required>
+                <label for="username" class="label">Username</label>
+                <i class="bx bx-user icon"></i>
+            </div>
+            <div class="input_box">
+                <input type="password" id="password" name="password" class="input-field" required>
+                <label for="password" class="label">Password</label>
+                <i class="bx bx-lock-alt icon"></i>
+            </div>
+            <div class="remember-forgot">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <div class="forgot">
+                    <a href="forgot_password.php" id="forgotPassword">Forgot password?</a>
+                </div>
+            </div>
+            <div class="input_box">
+                <button type="submit" class="input-submit">Login</button>
+            </div>
+            <div class="register">
+                <span>Don't have an account? <a href="reg.html">Register</a></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+    <!-- Forgot Password Modal -->
+    <div id="forgotModal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Forgot Password</h2>
+            <form id="forgotForm">
+                <div class="input_box">
+                    <input type="email" id="email" class="input-field" required>
+                    <label for="email" class="label">Email</label>
+                </div>
+                <div class="input_box">
+                    <input type="submit" class="input-submit" value="Send OTP">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Form Validation
+        
+
+        // Forgot Password Modal
+        const forgotPasswordLink = document.getElementById('forgotPassword');
+        const forgotModal = document.getElementById('forgotModal');
+        const closeModal = document.querySelector('.close');
+
+        forgotPasswordLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            forgotModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', function() {
+            forgotModal.style.display = 'none';
+        });
+
+        // Forgot Password Form Submission
+        document.getElementById('forgotForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+
+            if (email === '') {
+                alert('Please enter your email.');
+            } else {
+                // Simulate OTP generation and email sending
+                alert('OTP has been sent to your email.');
+                // Here you would typically send the email via a backend service
+                forgotModal.style.display = 'none';
+            }
+        });
+        function loginUser(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get user input
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+            // Simple check (Replace this with real authentication logic)
+            if (username === "admin" && password === "12345") {
+                alert("Login successful!");
+                window.location.href = "C:\Users\mamid\OneDrive\Desktop\DUP FIN\Mydashboard\dashboard.html"; // Redirect to dashboard
+            } else {
+                alert("Invalid credentials, try again.");
+            }
+        }
+    </script>
+</body>
+</html>

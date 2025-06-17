@@ -1,0 +1,441 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4F4F4F; /* Dark Gray for text */
+  line-height: 1.6;
+  background: #FFFFFF; /* White background */
+}
+
+h1, h2, h3 {
+  color: #000000; /* Black for headings */
+}
+
+a {
+  text-decoration: none;
+  color: #2D9CDB; /* Blue for links */
+}
+
+.cta-button {
+  background: #2D9CDB; /* Blue for buttons */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px 0;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #1E78B5; /* Darker Blue on hover */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: #000000; /* Black background */
+  color: #fff; /* White text for contrast */
+  overflow: hidden; /* Hide overflow for 3D effects */
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+/* Hero Media (3D Effect) */
+.hero-media {
+  position: relative;
+  width: 40%;
+  height: 300px;
+  perspective: 1200px; /* 3D Perspective */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image Slots */
+.image-slot {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 15px;
+  overflow: hidden;
+  transform-style: preserve-3d; /* Enable 3D effects */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.image-slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Position and Rotate Images for 3D Effect */
+#image1 {
+  transform: rotateY(-15deg) translateZ(50px);
+  z-index: 3;
+}
+
+#image2 {
+  transform: rotateY(10deg) translateZ(-30px) translateX(20px);
+  z-index: 2;
+}
+
+#image3 {
+  transform: rotateY(-5deg) translateZ(-60px) translateX(40px);
+  z-index: 1;
+}
+
+/* Hover Effects - Enhancing the 3D Effect */
+.hero-media:hover #image1 {
+  transform: rotateY(-20deg) translateZ(80px) scale(1.05);
+}
+
+.hero-media:hover #image2 {
+  transform: rotateY(15deg) translateZ(-10px) translateX(10px) scale(1.05);
+}
+
+.hero-media:hover #image3 {
+  transform: rotateY(-10deg) translateZ(-40px) translateX(30px) scale(1.05);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 50px;
+  text-align: center;
+  background: #FFFFFF; /* White background */
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature {
+  background: #E0E0E0; /* Soft Gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Key Features Section */
+.key-features {
+  padding: 50px;
+  background: #FFFFFF; /* White background */
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.feature-item {
+  background: #E0E0E0; /* Soft Gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* How It Works Section */
+.how-it-works {
+  padding: 50px;
+  text-align: center;
+  background: #FFFFFF; /* White background */
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.step {
+  background: #E0E0E0; /* Soft Gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Security & Privacy Section */
+.security-privacy {
+  padding: 50px;
+  background: #000000; /* Black background */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+}
+
+.security-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.security-features .feature {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  color: #fff;
+}
+
+.security-features .feature:hover {
+  background: rgba(255, 255, 255, 0.2); /* Brighter on hover */
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 50px;
+  background: #FFFFFF; /* White background */
+  text-align: center;
+}
+
+.testimonial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #E0E0E0; /* Soft Gray background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Download Section */
+.download {
+  padding: 50px;
+  background: #2D9CDB; /* Blue background */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+}
+
+.download-buttons {
+  margin-top: 20px;
+}
+
+.download-buttons .cta-button {
+  background: #000000; /* Black for buttons */
+  color: #fff;
+}
+
+.download-buttons .cta-button:hover {
+  background: #333333; /* Darker Black on hover */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000000; /* Black background */
+  color: #fff;
+}
+
+/* Navbar Styles */
+.navbar {
+  background: #000000; /* Black */
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1); /* Light hover effect */
+  border-radius: 5px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  color: #4F4F4F; /* Dark Gray */
+  padding: 10px 20px;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: #E0E0E0; /* Soft Gray */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Arrow for Dropdown */
+.arrow {
+  font-size: 0.8rem;
+  margin-left: 5px;
+}
+
+/* Login/Register Button */
+.nav-links .cta-button {
+  background: #2D9CDB; /* Blue */
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.nav-links .cta-button:hover {
+  background: #1E78B5; /* Darker Blue */
+}/* Money Falling Animation */
+.money-falling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Ensure it doesn't interfere with clicks */
+}
+
+.money {
+  position: absolute;
+  top: -50px;
+  font-size: 24px;
+  color: #27ae60; /* Green color for money */
+  animation: fall linear infinite;
+}
+
+/* Define the falling animation */
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+/* Randomize the animation duration and delay for each money element */
+.money:nth-child(1) {
+  left: 5%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+.money:nth-child(2) {
+  left: 15%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+.money:nth-child(3) {
+  left: 25%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+.money:nth-child(4) {
+  left: 35%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+.money:nth-child(5) {
+  left: 45%;
+  animation-duration: 6.5s;
+  animation-delay: 0.5s;
+}
+.money:nth-child(6) {
+  left: 55%;
+  animation-duration: 7.5s;
+  animation-delay: 1.5s;
+}
+.money:nth-child(7) {
+  left: 65%;
+  animation-duration: 8.5s;
+  animation-delay: 2.5s;
+}
+.money:nth-child(8) {
+  left: 75%;
+  animation-duration: 9.5s;
+  animation-delay: 3.5s;
+}
+.money:nth-child(9) {
+  left: 85%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+.money:nth-child(10) {
+  left: 95%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
